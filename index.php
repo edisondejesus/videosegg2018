@@ -340,7 +340,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="recommended-grids">
 						<div class="recommended-info">
 							<h3>Animated Cartoon</h3>
-							Video::crear_paginacion('cartoon');
+							<?php
+									Video::load_category('cartoon');
+							?>
 						</div>
 						<script src="js/responsiveslides.min.js"></script>
 						 <script>

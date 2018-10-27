@@ -42,7 +42,7 @@ form.navbar-form.navbar-right {
     position: relative;
 }
 .navbar-form .form-control {
-    width: 100%;
+    width: 70%;
 }
 .top-search form input[type="text"] {
     position: relative;
@@ -1849,7 +1849,7 @@ background: url(../images/social.png) no-repeat 0px 0px;
 }
 @media (max-width: 1080px) {
 	form.navbar-form.navbar-right {
-		width: 47%;
+		width: 35%;
 	}
 	.header-top-right {
 		margin: .5em 0;
@@ -1955,7 +1955,7 @@ background: url(../images/social.png) no-repeat 0px 0px;
 }
 @media (max-width: 1024px) {
 	form.navbar-form.navbar-right {
-		width: 43%;
+		width: 35%;
 	}
 	.slid-bottom-grid {
 		width: 50%;
@@ -2009,7 +2009,7 @@ background: url(../images/social.png) no-repeat 0px 0px;
 		float:right;
 	}
 	form.navbar-form.navbar-right {
-		width: 41%;
+		width: 35%;
 	}
 	.sidebar {
 		float: none !important;
@@ -2226,7 +2226,7 @@ background: url(../images/social.png) no-repeat 0px 0px;
 		border: none;
 	}
 	form.navbar-form.navbar-right {
-		width: 38%;
+		width: 50%;
 		margin: 0;
 	}
 	.top-search form input[type="submit"] {
