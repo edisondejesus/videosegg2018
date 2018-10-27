@@ -36,13 +36,13 @@ a.navbar-brand h1 {
 }
 form.navbar-form.navbar-right {
     margin-right: 1em;
-    width: 50%;
+    width: 40%;
     float: left !important;
     margin-left: 10em;
     position: relative;
 }
 .navbar-form .form-control {
-    width: 70%;
+    width: 100%;
 }
 .top-search form input[type="text"] {
     position: relative;
@@ -2009,7 +2009,7 @@ background: url(../images/social.png) no-repeat 0px 0px;
 		float:right;
 	}
 	form.navbar-form.navbar-right {
-		width: 35%;
+		width: 28%;
 	}
 	.sidebar {
 		float: none !important;
@@ -2127,7 +2127,7 @@ background: url(../images/social.png) no-repeat 0px 0px;
 		margin-left: 3em;
 	}
 	form.navbar-form.navbar-right {
-		width: 33%;
+		width: 23%;
 	}
 	ul.nav.nav-sidebar li a {
 		padding: .8em 0 .8em 27em;
@@ -2503,7 +2503,7 @@ background: url(../images/social.png) no-repeat 0px 0px;
 }
 @media (max-width: 320px) {
 	a.navbar-brand {
-		width: 35%;
+		width: 65%;
 	}
 	form.navbar-form.navbar-right {
 		width: 100%;

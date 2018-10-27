@@ -322,11 +322,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							Video::crear_paginacion($_GET['page']);
 
 
-						}else if(isset($_GET['page']) && isset($_GET['categoria'])){
 
-									Video::crear_paginacion($_GET['page'],$_GET['categoria']);
+						}else if( isset($_GET['categoria']) ){
 
 
+							if(!isset($_GET['page'])){
+
+								Video::read_page(0,$_GET['categoria'],"read_category");
+								Video::crear_paginacion(0,$_GET['categoria'],"categoria_page");
+							
+							}else{
+
+								Video::read_page($_GET['page'],$_GET['categoria'],"read_category");
+								Video::crear_paginacion($_GET['page'],$_GET['categoria'],"categoria_page");
+							}	
 
 						}
 						
