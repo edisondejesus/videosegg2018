@@ -1,6 +1,6 @@
 <?php
 		session_start();
-		include'../logic.php';
+		include'logic.php';
 		$data_v = Video::cargar_data_video($_GET['id']);
 
 		$data_imagen = $data_v->ruta_imagen;

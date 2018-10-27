@@ -297,7 +297,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h3>Recent Videos</h3>
 					</div>
 					<?php
-						include'../logic.php';
+						include'logic.php';
 
 						//print_r($conexion);
 
