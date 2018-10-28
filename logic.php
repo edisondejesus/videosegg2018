@@ -147,14 +147,14 @@ class Video {
 
 
 
-	public static function crear_paginacion($page="",$categoria="",$config="",$serach){
+	public static function crear_paginacion($page="",$categoria="",$config="",$serach=""){
 		//target 
 		global $conexion;
 		if($categoria!="" && $config=="categoria_page"){
 
 			$sql = "select count(titulo)cantidad from post where categoria like '%$categoria%'";
 
-		}else if($categoria=="" && $config=="")
+		}else if($categoria=="" && $config==""){
 			
 			$sql = "select count(titulo)cantidad from post";
 		
