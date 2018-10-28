@@ -11,7 +11,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>My Play a Entertainment Category Flat Bootstrap Responsive Website Template | single :: w3layouts</title>
+<title><?php echo $titulo; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:image" content="https://videosegg.com/<?php echo $data_imagen; ?>">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -41,7 +41,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><h1><img src="images/logo.png" alt="" /></h1></a>
+          <a class="navbar-brand" href="/web"><h1><img src="images/logo.png" alt="" /></h1></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 			<div class="top-search">
@@ -240,14 +240,18 @@
 			</div>
 				<div class="drop-navigation drop-navigation">
 				  <ul class="nav nav-sidebar">
-					<li><a href="index.html" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-					<li><a href="shows.html" class="user-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>TV Shows</a></li>
+					<li><a href="index.html" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Inicio</a></li>
+					<li><a href="cam.html" class="user-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Camara en Vivo</a></li>
 					<li><a href="history.html" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>History</a></li>
-					<li><a href="#" class="menu1"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>Movies<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
+					</span>Categorias<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
 						<ul class="cl-effect-2">
-							<li><a href="movies.html">English</a></li>                                             
-							<li><a href="movies.html">Chinese</a></li>
-							<li><a href="movies.html">Hindi</a></li> 
+							<li><a href="index.php?categoria=jovenes">Jovenes</a></li>                                   
+							<li><a href="index.php?categoria=Amateur">Amateur</a></li>
+							<li><a href="index.php?categoria=Lesbianas">Lesbianas</a></li>
+							<li><a href="index.php?categoria=trios">Trios</a></li>                                             
+							<li><a href="index.php?categoria=Anal">Anal</a></li>
+							<li><a href="index.php?categoria=Latina">Latinas</a></li> 
+				            <li><a style="font-size:14px;" href="categorias.php">Ver Mas...</a></li>
 						</ul>
 						<!-- script-for-menu -->
 						<script>
@@ -402,7 +406,7 @@
 					</div>
 				</div>
 				<div class="col-md-4 single-right">
-					<h3>Up Next</h3>//cargar videos releccionados aqui
+					<h3>Up Next</h3>
 					
 						
 							<?php
@@ -764,9 +768,7 @@
 			<!-- //footer -->
 		</div>
 		<div class="clearfix"> </div>
-		<?php
-		
-		?>
+	
 	<div class="drop-menu">
 		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
 		  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Regular link</a></li>

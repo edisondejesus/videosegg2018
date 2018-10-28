@@ -1,5 +1,5 @@
 <?php
-	include'conexion.php';
+	include'../conexion.php';
 
 
 
@@ -147,15 +147,21 @@ class Video {
 
 
 
-	public static function crear_paginacion($page="",$categoria="",$config=""){
+	public static function crear_paginacion($page="",$categoria="",$config="",$serach){
 		//target 
 		global $conexion;
 		if($categoria!="" && $config=="categoria_page"){
 
 			$sql = "select count(titulo)cantidad from post where categoria like '%$categoria%'";
 
-		}else{
+		}else if($categoria=="" && $config=="")
+			
 			$sql = "select count(titulo)cantidad from post";
+		
+		}else if($config=="search_paginacion" && $serach!=""){
+
+			$sql = "select count(titulo)cantidad where titulo like '%$serach%' || descripcion like'%$serach%'";
+
 		}
 		$posts = $conexion->query($sql);
 		$posts =  mysqli_fetch_object($posts);
@@ -368,6 +374,90 @@ class Video {
 
 
 				}
+
+
+		}else if($serach!="" && $config=="search_paginacion"  && $categoria==""){
+
+				$count_page = 0;
+			$contador=0;
+			$romper= 0;
+			if($page>3){
+					$page1 = $page -2;
+					$page2 = $page -1;
+					echo "<li ><a href='index.php?page=$page1&categoria=$categoria' >$page1</a></li>";
+					echo "<li ><a href='index.php?page=$page2&categoria=$categoria' >$page2</a></li>";
+		   }else if($page==3){
+		   			$page1 = $page -2;
+					$page2 = $page -1;
+					echo "<li ><a href='index.php?page=$page1&categoria=$categoria' >$page1</a></li>";
+					echo "<li ><a href='index.php?page=$page2&categoria=$categoria' >$page2</a></li>";
+
+
+		   }else if($page==2){
+
+		   			$page1 = $page -1;
+					echo "<li ><a href='index.php?page=$page1&categoria=$categoria'>$page1</a></li>";
+
+		   }
+
+		 #  echo "<h1>CANTIDAD ACTUAL DE PAGIANAS $cantidad</h1>";
+
+
+				for ($i=1; $i<=$cantidad; $i++) { 
+						
+						$count_post+=1;
+						
+						if($count_post==20){
+							
+							$count_page++;
+							$count_post=0;
+						
+
+							if($count_page>=$page){
+								$romper++;
+								
+								if($categoria==""){
+
+
+										if($count_page==$page){
+											echo "<li ><a href='index.php?page=$count_page&categoria=$categoria' style='background:black;'>$count_page</a></li>";
+										}else{
+												echo "<li ><a href='index.php?page=$count_page&categoria=$categoria' >$count_page</a></li>";
+
+										}
+
+								}else{
+										if($count_page==$page){
+												echo "<li ><a href='index.php?page=$count_page&categoria=$categoria' style='background:black;'>$count_page</a></li>";
+
+										}else{
+													echo "<li ><a href='index.php?page=$count_page&categoria=$categoria'>$count_page</a></li>";
+
+										}	
+
+								}
+						     	
+					     	}
+
+					
+							
+						}
+
+					if($romper==13){
+
+						break;
+					}
+
+					     	
+
+		
+
+
+
+				}
+
+
+
 
 
 		}
