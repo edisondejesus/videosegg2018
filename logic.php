@@ -1,4 +1,5 @@
 <?php
+#archivo logico preparado
 	include'../conexion.php';
 
 
