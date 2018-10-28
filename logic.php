@@ -98,8 +98,8 @@ class Video {
 								
 			        <div   class='resent-grid-img recommended-grid-img' >
 
-			        		<div id='video$id'>
-									<a href='playvideo.php?id=$key[id_post]'><img style='height:190px;' src='../$key[ruta_imagen]' ontouchmove='load_preview(`video$id`,`$key[previa]`,`single.php?id=$key[id_post]&categoria=$key[categoria]`,`$key[ruta_imagen]`,`$key[duracion]`)' alt='' /></a>
+			        		<div id='video$key[id_post]'>
+						<a href='playvideo.php?id=$key[id_post]'><img style='height:190px;' src='https://videosegg.com/$key[ruta_imagen]' ontouchmove='load_preview(`video$key[id_post]`,`$key[previa]`,`single.php?id=$key[id_post]&categoria=$key[categoria]`,`$key[ruta_imagen]`,`$key[duracion]`)' alt='' /></a>
 										
 			        		</div>
 										<div class='time'>
@@ -113,7 +113,7 @@ class Video {
 								<div class='resent-grid-info recommended-grid-info'>
 					<p><a href='single.php?id=$key[id_post]&categoria=$key[categoria]' class='title title-info'>$titulo</a></p>
 									<ul>
-										<li class='right-list'><p class='views views-info'>$key[usuario]</p></li>
+										<li class='right-list'><p class='views views-info'></p></li>
 									</ul>
 								</div>
 							</div>
@@ -643,7 +643,7 @@ class Video {
 					</div>
 
 						<div class='video-grid'>
-							<video  class='img-responsive' id='video_listo' controls width='990' src='../$data->ruta_video' poster='../$data->ruta_imagen' type='video/webm'></video><br>
+							<video  class='img-responsive' id='video_listo' controls width='990' src='https://videosegg.com/$data->ruta_video' poster='https://videosegg.com/$data->ruta_imagen' type='video/webm'></video><br>
 						</div>
 					</div>
 
@@ -673,7 +673,7 @@ class Video {
 							<div class='single-right-grids'>
 
 							<div class='col-md-4 single-right-grid-left'>
-							<a href='playvideo.php?id=$key[id_post]'><img src='../$key[ruta_imagen]' alt='' /></a>
+							<a href='playvideo.php?id=$key[id_post]'><img src='https://videosegg.com/$key[ruta_imagen]' alt='' /></a>
 								</div>
 								<div class='col-md-8 single-right-grid-right'>
 									<a href='single.html' class='title'>$key[titulo]</a>
@@ -712,7 +712,7 @@ class Video {
 						echo "
 										<div class='col-md-3 resent-grid recommended-grid slider-first'>
 											<div class='resent-grid-img recommended-grid-img'>
-												<a href='single.html'><img src='../$key[ruta_imagen]' alt='' /></a>
+												<a href='single.html'><img src='https://videosegg/$key[ruta_imagen]' alt='' /></a>
 												<div class='time smalltime slider-time'>
 													<p>$key[duracion]</p>
 												</div>
