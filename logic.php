@@ -8,7 +8,7 @@
 class Video {
 
 	public static function url_ready($id_post,$titulo){
-        $url_video = "videoplay.php?id=$id_post/$titulo";
+        $url_video = "playvideo.php?id=$id_post/$titulo";
         $url_ready = str_replace(' ', '_', $url_video);
 
         return $url_ready;
