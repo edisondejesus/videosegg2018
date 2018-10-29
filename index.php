@@ -1445,15 +1445,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.min.js"></script>
               <script src="js/jquery-3.1.1.min.js"></script>
-  <script src="../js/paginador_back.js"></script>
-  <script src="../js/alertify.js"></script>
-  <script src="../js/alertify.min.js"></script>
-  <script src="../js/funcion.js"></script>
-  <script src="../js/search.js"></script>
+
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../js/categorias_load.js"></script>
-  <script type="text/javascript" src="../js/ventana_bienvenida.js"></script>
+
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
   </body>
 </html>

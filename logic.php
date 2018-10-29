@@ -7,8 +7,8 @@
 
 class Video {
 
-	 function url_ready($id_post,$titulo){
-        $url_video = "ver_video.php?id=$id_post/$titulo";
+	public static function url_ready($id_post,$titulo){
+        $url_video = "videoplay.php?id=$id_post/$titulo";
         $url_ready = str_replace(' ', '_', $url_video);
 
         return $url_ready;
@@ -92,6 +92,7 @@ class Video {
 
 			$titulo	= Video::cortar_titulo($key['titulo'],35);
 
+				$url = Video::url_ready($key['id_post'],$key['titulo']);
 
 					echo "
 						<a href=''  >
@@ -100,7 +101,7 @@ class Video {
 			        <div   class='resent-grid-img recommended-grid-img' >
 
 			        		<div id='video$key[id_post]'>
-						<a href='playvideo.php?id=$key[id_post]'><img style='height:190px;' src='https://videosegg.com/$key[ruta_imagen]' ontouchmove='load_preview(`video$key[id_post]`,`$key[previa]`,`single.php?id=$key[id_post]&categoria=$key[categoria]`,`$key[ruta_imagen]`,`$key[duracion]`)' alt='' /></a>
+						<a href='$url'><img style='height:190px;' src='https://videosegg.com/$key[ruta_imagen]' ontouchmove='load_preview(`video$key[id_post]`,`$key[previa]`,`single.php?id=$key[id_post]&categoria=$key[categoria]`,`$key[ruta_imagen]`,`$key[duracion]`)' alt='' /></a>
 										
 			        		</div>
 										<div class='time'>
@@ -112,7 +113,7 @@ class Video {
 									</div>
 								</div>
 								<div class='resent-grid-info recommended-grid-info'>
-					<p><a href='single.php?id=$key[id_post]&categoria=$key[categoria]' class='title title-info'>$titulo</a></p>
+					<p><a href='$url' class='title title-info'>$titulo</a></p>
 									<ul>
 										<li class='right-list'><p class='views views-info'></p></li>
 									</ul>
