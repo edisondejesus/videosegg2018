@@ -148,7 +148,7 @@ class Video {
 
 
 
-	public static function crear_paginacion($page="",$categoria="",$config="",$serach=""){
+	public static function crear_paginacion($page="",$categoria="",$config="",$search=""){
 		//target 
 		global $conexion;
 		if($categoria!="" && $config=="categoria_page"){
@@ -159,9 +159,9 @@ class Video {
 			
 			$sql = "select count(titulo)cantidad from post";
 		
-		}else if($config=="search_paginacion" && $serach!=""){
+		}else if($config=="search_paginacion" && $search!=""){
 
-			$sql = "select count(titulo)cantidad where titulo like '%$serach%' || descripcion like'%$serach%'";
+	$sql = "select count(titulo)cantidad from post where titulo like '%$search%' || descripcion like '%$search%'";
 
 		}
 		$posts = $conexion->query($sql);
@@ -377,7 +377,7 @@ class Video {
 				}
 
 
-		}else if($serach!="" && $config=="search_paginacion"  && $categoria==""){
+		}else if($search!="" && $config=="search_paginacion"  && $categoria==""){
 
 				$count_page = 0;
 			$contador=0;
@@ -385,19 +385,19 @@ class Video {
 			if($page>3){
 					$page1 = $page -2;
 					$page2 = $page -1;
-					echo "<li ><a href='index.php?page=$page1&search=$serach' >$page1</a></li>";
-					echo "<li ><a href='index.php?page=$page1&search=$serach' >$page2</a></li>";
+					echo "<li ><a href='index.php?page=$page1&search=$search' >$page1</a></li>";
+					echo "<li ><a href='index.php?page=$page2&search=$search' >$page2</a></li>";
 		   }else if($page==3){
 		   			$page1 = $page -2;
 					$page2 = $page -1;
-					echo "<li ><a href='index.php?page=$page1&search=$serach' >$page1</a></li>";
-					echo "<li ><a href='index.php?page=$page1&search=$serach' >$page2</a></li>";
+					echo "<li ><a href='index.php?page=$page1&search=$search' >$page1</a></li>";
+					echo "<li ><a href='index.php?page=$page2&search=$search' >$page2</a></li>";
 
 
 		   }else if($page==2){
 
 		   			$page1 = $page -1;
-					echo "<li ><a href='index.php?page=$page1&search=$serach'>$page1</a></li>";
+					echo "<li ><a href='index.php?page=$page1&search=$search'>$page1</a></li>";
 
 		   }
 
@@ -421,18 +421,18 @@ class Video {
 
 
 										if($count_page==$page){
-											echo "<li ><a href=href='index.php?page=$page1&search=$serach' style='background:black;'>$count_page</a></li>";
+											echo "<li ><a href=href='index.php?page=$page&search=$search' style='background:black;'>$count_page</a></li>";
 										}else{
-												echo "<li ><a href='index.php?page=$page1&search=$serach' >$count_page</a></li>";
+									echo "<li ><a href='index.php?page=$page&search=$search'>$count_page</a></li>";
 
 										}
 
 								}else{
 										if($count_page==$page){
-												echo "<li ><a href='index.php?page=$page1&search=$serach' style='background:black;'>$count_page</a></li>";
+												echo "<li ><a href='index.php?page=$page&search=$search' style='background:black;'>$count_page</a></li>";
 
 										}else{
-													echo "<li ><a href='index.php?page=$page1&search=$serach'>$count_page</a></li>";
+													echo "<li ><a href='index.php?page=$page&search=$search'>$count_page</a></li>";
 
 										}	
 
@@ -544,10 +544,10 @@ class Video {
 		}
 
 
-		public static function search_video($serach){
+		public static function search_video($search){
 
 					global $conexion;
-			       $sql = "select * from post where titulo like '%$serach%' || categoria like '%$serach%' limit 30";
+			       $sql = "select * from post where titulo like '%$search%' || categoria like '%$search%' limit 30";
 			       $data = $conexion->query($sql);
 			      foreach ($data as $key) {
 		

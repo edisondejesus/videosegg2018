@@ -302,10 +302,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 							Video::search_video($_GET['search']);
+							Video::crear_paginacion(0,"","search_paginacion",$_GET['search']);
 
 
 						}
-						if(!isset($_GET['page']) && !isset($_GET['categoria'])){
+						if(!isset($_GET['page']) && !isset($_GET['categoria']) && !isset($_GET['search'])){
 							Video::videos_read();	
 
 							Video::crear_paginacion();
