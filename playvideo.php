@@ -5,7 +5,7 @@
 
 		$data_imagen = $data_v->ruta_imagen;
 		$categoria = $data_v->categoria;
-		$decripcion =$data_v->descripcion;
+		$descripcion =$data_v->descripcion;
 		$titulo = $data_v->titulo;
 ?>
 <!DOCTYPE HTML>
@@ -348,7 +348,7 @@
 								<ul id="myList">
 									<li>
 										<h4><?php echo $titulo; ?></h4>
-										<?php echo "<p>".$descripcion."</p>"; ?>
+										<?php echo  "<p>$descripcion</p>"; ?>
 									</li>
 									<li>
 							

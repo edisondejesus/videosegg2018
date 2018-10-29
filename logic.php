@@ -22,7 +22,7 @@ class Video {
       		if($page==1){
 
 
-      				$sql = "select * from post  order by fecha_publicacion desc limit 0,19";
+      				$sql = "select * from post  order by fecha_publicacion desc limit 0,21";
       				$data = $conexion->query($sql);
 
       				foreach ($data as $key) {
@@ -385,19 +385,19 @@ class Video {
 			if($page>3){
 					$page1 = $page -2;
 					$page2 = $page -1;
-					echo "<li ><a href='index.php?page=$page1&categoria=$categoria' >$page1</a></li>";
-					echo "<li ><a href='index.php?page=$page2&categoria=$categoria' >$page2</a></li>";
+					echo "<li ><a href='index.php?page=$page1&search=$serach' >$page1</a></li>";
+					echo "<li ><a href='index.php?page=$page1&search=$serach' >$page2</a></li>";
 		   }else if($page==3){
 		   			$page1 = $page -2;
 					$page2 = $page -1;
-					echo "<li ><a href='index.php?page=$page1&categoria=$categoria' >$page1</a></li>";
-					echo "<li ><a href='index.php?page=$page2&categoria=$categoria' >$page2</a></li>";
+					echo "<li ><a href='index.php?page=$page1&search=$serach' >$page1</a></li>";
+					echo "<li ><a href='index.php?page=$page1&search=$serach' >$page2</a></li>";
 
 
 		   }else if($page==2){
 
 		   			$page1 = $page -1;
-					echo "<li ><a href='index.php?page=$page1&categoria=$categoria'>$page1</a></li>";
+					echo "<li ><a href='index.php?page=$page1&search=$serach'>$page1</a></li>";
 
 		   }
 
@@ -421,18 +421,18 @@ class Video {
 
 
 										if($count_page==$page){
-											echo "<li ><a href='index.php?page=$count_page&categoria=$categoria' style='background:black;'>$count_page</a></li>";
+											echo "<li ><a href=href='index.php?page=$page1&search=$serach' style='background:black;'>$count_page</a></li>";
 										}else{
-												echo "<li ><a href='index.php?page=$count_page&categoria=$categoria' >$count_page</a></li>";
+												echo "<li ><a href='index.php?page=$page1&search=$serach' >$count_page</a></li>";
 
 										}
 
 								}else{
 										if($count_page==$page){
-												echo "<li ><a href='index.php?page=$count_page&categoria=$categoria' style='background:black;'>$count_page</a></li>";
+												echo "<li ><a href='index.php?page=$page1&search=$serach' style='background:black;'>$count_page</a></li>";
 
 										}else{
-													echo "<li ><a href='index.php?page=$count_page&categoria=$categoria'>$count_page</a></li>";
+													echo "<li ><a href='index.php?page=$page1&search=$serach'>$count_page</a></li>";
 
 										}	
 
