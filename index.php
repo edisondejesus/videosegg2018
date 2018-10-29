@@ -252,13 +252,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							});
 							});
 						</script>
-					<li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Sports<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
-						<ul class="cl-effect-1">
-							<li><a href="sports.html">Football</a></li>                                             
-							<li><a href="sports.html">Cricket</a></li>
-							<li><a href="sports.html">Tennis</a></li> 
-							<li><a href="sports.html">Shattil</a></li>  
-						</ul>
+			
 						<!-- script-for-menu -->
 						<script>
 							$( "li a.menu" ).click(function() {
@@ -267,8 +261,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							});
 							});
 						</script>
-					<li><a href="movies.html" class="song-icon"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>Songs</a></li>
-					<li><a href="news.html" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>News</a></li>
+					
+					<li><a href="news.html" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Soporte</a></li>
 				  </ul>
 				  <!-- script-for-menu -->
 						<script>
