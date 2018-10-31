@@ -588,7 +588,7 @@ class Video {
 		 			$_SESSION['foto_url'] = $data->foto_url;
 
 
-					header("location:../dashboard.php");
+					header("location:dashboard.php");
 
 				}else{
 
@@ -959,6 +959,32 @@ if($tipo_arc=="mp4" || $tipo_arc=="avi" || $tipo_arc=="webm" || $tipo_arc=="h264
 
 
 
+
+
+
+
+
+
+
+		}
+
+		public static  function leer_comentarios($id_post){
+
+			global $conexion;
+				$sql ="select * from comentario as c inner join user as u on  c.id_user=u.id_user  where c.id_post=? order by fecha_publicacion desc ";
+
+				$read =$conexion->prepare($sql);
+				$read->bind_param('i',$id_post);
+				$read->execute();
+				$ejecutar = $read->get_result();
+
+				foreach ($ejecutar as $key) {
+					
+						$data[] = $key;
+
+				}
+
+				echo json_encode($data);
 
 
 

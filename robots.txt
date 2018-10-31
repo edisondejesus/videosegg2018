@@ -1,0 +1,20 @@
+User-agent: Googlebot
+
+User-agent: *
+Allow: /
+Disallow /guardar_comenterio.php
+Disallow /contar_visita.php
+Disallow /conexion.php
+Disallow /llamar_change.php
+Disallow /leer_comentarios.php
+Disallow /dashboard.php
+Disallow /categorias_ready.php
+Disallow /change_video.php
+Disallow /gestos_on.php
+Disallow /gestos.php
+Disallow /eliminar_video.php
+Disallow /repair_video.php
+Disallow /keys
+
+
+Sitemap: https://www.videosegg.com/sitemap.xml

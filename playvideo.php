@@ -1,12 +1,15 @@
 <?php
 		session_start();
 		include'logic.php';
+
+		if(isset($_GET['id'])){
 		$data_v = Video::cargar_data_video($_GET['id']);
 
 		$data_imagen = $data_v->ruta_imagen;
 		$categoria = $data_v->categoria;
 		$descripcion =$data_v->descripcion;
 		$titulo = $data_v->titulo;
+	}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -76,7 +79,7 @@
 										</div>
 										<div class="signup">
 											<form>
-												<input type="text" class="email" placeholder="Mobile Number" maxlength="10" pattern="[1-9]{1}\d{9}" title="Enter a valid mobile number" />
+											<input type="text" class="email" placeholder="Mobile Number" maxlength="10" pattern="[1-9]{1}\d{9}" title="Enter a valid mobile number" />
 											</form>
 											<div class="continue-button">
 												<a href="#small-dialog3" class="hvr-shutter-out-horizontal play-icon popup-with-zoom-anim">CONTINUE</a>
@@ -98,10 +101,10 @@
 											</div>
 										</div>
 										<div class="signup">
-											<form>
-												<input type="text" class="email" placeholder="Email" required="required" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" title="Enter a valid email"/>
-												<input type="password" placeholder="Password" required="required" pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
-												<input type="text" class="email" placeholder="Mobile Number" maxlength="10" pattern="[1-9]{1}\d{9}" title="Enter a valid mobile number" />
+											<form method="post">
+										    <input type="text" class="email" placeholder="Email" required="required" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" title="Enter a valid email"/>
+												<input type="password" placeholder="Password" required="required" pattern=".{6,}" name="usuario"  title="Minimum 6 characters required" autocomplete="off" />
+												<input type="text" class="email" placeholder="Mobile Number" maxlength="10" pattern="[1-9]{1}\d{9}" title="Enter a valid mobile number" name="password" />
 												<input type="submit"  value="Sign Up"/>
 											</form>
 										</div>
@@ -778,6 +781,16 @@
     	});
 
     </script>
+
+    <?php
+
+    	if(!isset($_POST['usuario'])){
+
+    //	Video::login($_POST['usuario'],$_POST['clave']);
+
+    }
+
+    ?>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
   </body>
 </html>
