@@ -185,7 +185,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																											
 											});
 									</script>	
-
 				</div>
 				<div class="signin">
 					<a href="#small-dialog" class="play-icon popup-with-zoom-anim">Sign In</a>
