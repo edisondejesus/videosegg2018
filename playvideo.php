@@ -9,6 +9,7 @@
 		$categoria = $data_v->categoria;
 		$descripcion =$data_v->descripcion;
 		$titulo = $data_v->titulo;
+		#ready to go
 	}
 ?>
 <!DOCTYPE HTML>
